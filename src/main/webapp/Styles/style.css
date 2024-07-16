@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: #000;
+    overflow-x: hidden;
+    color: white;
+    height: auto;
+    width: 100%;
+}
+
+header {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgb(6, 6, 6);
+    height: 7vh;
+    z-index: 10000;
+    transition: all 0.1s ease-in;
+}
+
+nav {
+    position: relative;
+    width: 100vw;
+    padding: 10px;
+}
+
+nav ul {
+    animation: fadeIn 0.2s ease-in-out;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav>ul>a {
+    color: white;
+}
+
+.hello {
+    font-family: "Poppins", sans-serif;
+}
+
+.name {
+    color: orange;
+}
+
+.banner {
+    line-height: -20px;
+    width: 100vw;
+    animation: fadeIn 2s ease-in-out;
+    /* overflow: hidden; */
+    height: 90vh;
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner>div {
+    line-height: 80px;
+}
+
+.banner>div>h1 {
+    font-size: 100px;
+
+}
+
+img {
+    position: relative;
+    border-radius: 100px;
+    background: #000;
+    z-index: 100;
+    filter: drop-shadow(0px 3px 6px orange);
+}
+
+.img-container {
+    padding: 2px;
+    height: fit-content;
+    border-radius: 100px;
+    z-index: 10;
+    transform: rotateX(360deg);
+    transition: ease-in;
+    position: relative;
+}
+
+.img-container::before {
+    content: " ";
+    animation: spin 3s ease-out infinite;
+    color: white;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0px;
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(10deg, orange, rgb(19, 21, 3));
+    border-radius: 100px;
+}
+
+.img-container::after {
+    content: " ";
+    animation: spin 3s ease-out infinite;
+    color: white;
+    position: absolute;
+    z-index: -1;
+    bottom: 36px;
+    right: -35px;
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(210deg, orange, black);
+    border-radius: 100px;
+}
+
+.buble {
+    position: relative;
+    z-index: 100;
+}
+
+.buble::before {
+    content: " ";
+    animation: spin 3s ease-out infinite;
+    color: white;
+    position: relative;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(210deg, rgb(212, 142, 13), rgb(255 16 16 / 68%));
+    border-radius: 250px;
+}
+
+h2,
+p {
+    position: relative;
+    z-index: 1000;
+}
+
+a {
+    position: relative;
+    height: 4px;
+}
+
+a::after {
+    content: "";
+    display: block;
+    margin: auto;
+    background: orange;
+    top: 0;
+    left: 0px;
+    width: 0%;
+    height: 2px;
+}
+
+a:hover {
+    filter: drop-shadow(0px 2px 4px orange);
+}
+
+a:hover::after {
+    width: 100%;
+    transition: width 0.2s ease-in-out;
+}
+
+main {
+    padding: 5vw;
+}
+
+.heading {
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.Aboutimg {
+    width: 20vw;
+    height: auto;
+    border-radius: 100px;
+    filter: drop-shadow(0px 5px 10px orange);
+}
+
+.aboutme>.heading::after {
+    content: "About";
+    display: block;
+    font-size: 80px;
+    position: relative;
+    z-index: -10;
+    color: #9286866d;
+    top: -50px;
+}
+
+#Skills>.heading::after {
+    content: "Skills";
+    display: block;
+    z-index: -10;
+    font-size: 80px;
+    position: relative;
+    color: #9286866d;
+    top: -50px;
+}
+
+#Projects>.heading::after {
+    content: "Projects";
+    z-index: -10;
+    display: block;
+    font-size: 80px;
+    position: relative;
+    color: #9286866d;
+    top: -50px;
+}
+
+#Contact>.heading::after {
+    content: "Contact";
+    display: block;
+    font-size: 83px;
+    font-weight: bolder;
+    z-index: -10;
+    position: relative;
+    color: #9286866d;
+    top: -50px;
+}
+
+#About {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.aboutme {
+    width: 50vw;
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+}
+
+#Skills {
+    width: 90vw;
+    height: 100vh;
+}
+
+.skill-card {
+    margin: 5px;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    width: 30vw;
+    height: 10vh;
+}
+
+.skill-card>span {
+    position: relative;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 100;
+}
+
+.progress-bar {
+    background: #4c4b4b;
+    height: 10px;
+    width: 25vw;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 10px 0px;
+}
+
+.progress {
+    background: orange;
+    display: block;
+    height: 15px;
+}
+
+#Contact {
+    width: 90vw;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px;
+    border-radius: 25px;
+    background: rgb(38, 37, 37);
+    width: fit-content;
+}
+
+input {
+    display: inline-block;
+    width: 300px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 15px;
+    margin: auto;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+
+    width: 100vw;
+    height: 120px;
+}
+
+textarea {
+    margin: auto;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 500px;
+    padding: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    overflow: hidden;
+}
+
+textarea:focus {
+    filter: drop-shadow(1px 2px 10px rgb(62, 61, 60));
+
+    background: transparent;
+    border-bottom: 2px solid rgba(244, 240, 232, 0.596);
+    color: white;
+
+}
+
+.form-btn {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: auto;
+    font-family: "Poppins", sans-serif;
+}
+
+.form-btn:hover {
+    filter: drop-shadow(1px 2px 10px rgb(62, 61, 60));
+    background: gray;
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease-in;
+}
+
+input:focus {
+    filter: drop-shadow(1px 2px 10px rgb(62, 61, 60));
+    background: transparent;
+    border-bottom: 2px solid rgba(244, 240, 232, 0.596);
+    color: white;
+}
+
+input::placeholder {
+    font-family: "Poppins", sans-serif;
+}
+
+textarea::placeholder {
+    font-family: "Poppins", sans-serif;
+}
+
+#Projects {
+    box-sizing: border-box;
+    width: fit-content;
+    height: auto;
+    margin: 2px auto;
+    margin-bottom: 20vh;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-cards {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 300px;
+    height: 100%;
+}
+
+.project-cards img {
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    /* Adjusted to maintain consistency */
+    object-fit: contain;
+}
+
+.project-cards h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.project-cards a {
+    color: white;
+    text-decoration: none;
+}
+
+.project-cards:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+}
+
+footer {
+    display: block;
+    width: 100%;
+    height: 20px;
+    font-family: "Poppins";
+    text-align: center;
+}
+
+
+
+
+@keyframes typing {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 20%;
+    }
+
+    100% {
+        width: 25%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+    .aboutme>.heading::after,
+    #Skills>.heading::after,
+    #Projects>.heading::after,
+    #Contact>.heading::after {
+        font-size: 80%;
+        font-weight: bolder;
+        top: -80px;
+    }
+
+    .banner>div {
+        line-height: 30px;
+    }
+
+    .aboutmep {
+        width: 50vw;
+        white-space: 12px;
+
+    }
+
+    .img-container>img {
+        /* margin-top: 250px; */
+    }
+
+    .banner {
+        flex-direction: flex;
+    }
+
+    .skill-card {
+        width: fit-content;
+    }
+
+    .skill-container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .banner>div>h1 {
+        font-size: 50px;
+    }
+
+
+
+
+
+    #About {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .Aboutimg {
+        width: 30vw;
+        margin-right: 50px;
+    }
+
+    .aboutme {
+        width: 90vw;
+    }
+
+    .skill-card {
+        width: 80vw;
+    }
+
+    textarea {
+        width: 300px;
+    }
+
+    .progress-bar {
+        width: 80%;
+    }
+
+    .project-container {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+
+    textarea {
+
+        font-size: 1em;
+    }
+
+
+    @media (max-width: 480px) {
+        .banner {
+            flex-direction: column-reverse;
+        }
+
+        .aboutmep {
+            width: 90vw;
+            white-space: 12px;
+
+        }
+
+        .banner>div>h1 {
+            font-size: 35px;
+        }
+
+        .Aboutimg {
+            display: none;
+        }
+
+        .aboutme>.heading::after,
+        #Skills>.heading::after,
+        #Projects>.heading::after,
+        #Contact>.heading::after {
+            font-size: 35px;
+            /* top: -20px; */
+        }
+
+        .project-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .skill-card {
+            width: 100%;
+        }
+
+        textarea {
+            width: 250px;
+        }
+
+        .progress-bar {
+            width: 100%;
+        }
+
+        #Contact {
+            height: auto;
+            padding: 120px;
+        }
+    }
+}
