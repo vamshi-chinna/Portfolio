@@ -25,8 +25,8 @@ public class SendMailServlet extends HttpServlet {
 
         // Send email
         String host = "smtp.gmail.com";
-        final String username = "vamshi30081999@gmail.com"; // replace with your email
-        final String password = "Chinna@143"; // replace with your email password
+        final String username = "replace with your email"; 
+        final String password = "replace with your email password"; 
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
@@ -44,7 +44,7 @@ public class SendMailServlet extends HttpServlet {
         try {
             Message mimeMessage = new MimeMessage(session);
             mimeMessage.setFrom(new InternetAddress(email));
-            mimeMessage.setRecipients(Message.RecipientType.TO, InternetAddress.parse("vamshi30081999@gmail.com"));
+            mimeMessage.setRecipients(Message.RecipientType.TO, InternetAddress.parse("your email address"));
             mimeMessage.setSubject("New message from " + name);
             mimeMessage.setText(message);
 
